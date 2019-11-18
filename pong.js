@@ -29,10 +29,10 @@ function keyDownHandler(e) {
   else if(e.key == "Down" || e.key == "ArrowDown") {
     downPressed = true;
   }
-  if(e.key == "z") {
+  if(e.key == "z" || e.key =="Z" ) {
     f1Pressed = true;
   }
-  else if(e.key == "s") {
+  else if(e.key == "s" || e.key == "S") {
     f2Pressed = true;
   }
 }
@@ -44,10 +44,10 @@ function keyUpHandler(e) {
   else if(e.key == "Down" || e.key == "ArrowDown") {
     downPressed = false;
   }
-  if(e.key == "z") {
+  if(e.key == "z" || e.key == "Z") {
     f1Pressed = false;
   }
-  else if(e.key == "s") {
+  else if(e.key == "s"|| e.key == "S") {
     f2Pressed = false;
   }
 }
