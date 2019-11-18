@@ -23,16 +23,16 @@ var f1Pressed = false;
 var f2Pressed = false;
 
 function keyDownHandler(e) {
-  if(e.key == "Up" || e.key == "ArrowUp") {
+  if(e.keyCode == 38) {
     upPressed = true;
   }
-  else if(e.key == "Down" || e.key == "ArrowDown") {
+  else if(e.keyCode == 40) {
     downPressed = true;
   }
-  if(e.key == "z" || e.key =="Z" ) {
+  if(e.keyCode == 90) {
     f1Pressed = true;
   }
-  else if(e.key == "s" || e.key == "S") {
+  else if(e.keyCode == 83) {
     f2Pressed = true;
   }
 }
@@ -55,8 +55,8 @@ function keyUpHandler(e) {
 //create ball
 var x = canvas.width/2;
 var y = canvas.height/2;
-var dx = 2;
-var dy = -2;
+var dx = 1;
+var dy = -1;
 
 function drawBall() {
   ctx.beginPath();
