@@ -95,10 +95,15 @@ function drawLeftPaddle() {
   ctx.closePath();
 }
  
-var interval 
+var interval;
+var i = false;
 function start(e) {
-  if(e.keyCode == 32); {
-    interval = setInterval(draw, 10);
+  if(i == true) {
+    return;
+  }
+  else if(e.keyCode == 32); {
+   interval = setInterval(draw, 10);
+   i = true;
   }
 }
 //draw function
