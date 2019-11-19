@@ -61,7 +61,7 @@ var dy = -1;
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#ffffff";
   ctx.fill();
   ctx.closePath();
 }
@@ -77,7 +77,7 @@ var rightpaddleY = (canvas.height-rightpaddleHeight) / 2;
 function drawRightPaddle() {
   ctx.beginPath();
   ctx.rect(canvas.width-rightpaddleWidth, rightpaddleY, rightpaddleWidth, rightpaddleHeight);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#ffffff";
   ctx.fill();
   ctx.closePath();
 }
@@ -90,11 +90,17 @@ var leftpaddleY = (canvas.height-leftpaddleHeight) / 2;
 function drawLeftPaddle() {
   ctx.beginPath();
   ctx.rect(0, leftpaddleY, leftpaddleWidth, leftpaddleHeight);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#ffffff";
   ctx.fill();
   ctx.closePath();
 }
-
+ 
+var interval 
+function start(e) {
+  if(e.keyCode == 32); {
+    interval = setInterval(draw, 10);
+  }
+}
 //draw function
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -143,6 +149,6 @@ function draw() {
   }
 }
 
+document.addEventListener("keydown", start, false);
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-var interval = setInterval(draw, 10);
