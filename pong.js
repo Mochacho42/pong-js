@@ -38,16 +38,16 @@ function keyDownHandler(e) {
 }
 
 function keyUpHandler(e) {
-  if(e.key == "Up" || e.key == "ArrowUp") {
+  if(e.keyCode == 38) {
     upPressed = false;
   }
-  else if(e.key == "Down" || e.key == "ArrowDown") {
+  else if(e.keyCode == 40) {
     downPressed = false;
   }
-  if(e.key == "z" || e.key == "Z") {
+  if(e.keyCode == 90) {
     f1Pressed = false;
   }
-  else if(e.key == "s"|| e.key == "S") {
+  else if(e.keyCode == 83) {
     f2Pressed = false;
   }
 }
