@@ -106,6 +106,13 @@ function start(e) {
    i = true;
   }
 }
+/*alternative qui bug
+function start() {
+  if(e.keyCode == 32 && i == true) {
+    interval = setInterval(draw, 10);
+  }
+}
+*/
 //draw function
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
