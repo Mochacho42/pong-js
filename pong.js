@@ -126,7 +126,7 @@ function draw() {
   if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
     dy = -dy;
   }
-  else if(x + dx > canvas.width-ballRadius || x + dx == 0) {
+  else if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
     alert("Game over!");
     document.location.reload();
     clearInterval(interval);
