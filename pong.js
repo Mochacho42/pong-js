@@ -134,12 +134,12 @@ function draw() {
 
 
   //bounce right paddle
-  if((y > rightpaddleY && y < rightpaddleY + 100) && x > canvas.width-ballRadius-rightpaddleWidth) {
+  if((y > rightpaddleY && y < rightpaddleY + 100) && x > (canvas.width-ballRadius-rightpaddleWidth)) {
     dx = -dx;
   }
 
   //bounce left paddle
-  if((y > leftpaddleY && y < leftpaddleY + 100) && x < 0 + ballRadius + leftpaddleWidth) {
+  if((y > leftpaddleY && y < leftpaddleY + 100) && x < (0 + ballRadius + leftpaddleWidth)) {
     dx = 2;
   }
 
