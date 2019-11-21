@@ -101,7 +101,7 @@ function start(e) {
   if(i == true) {
     return;
   }
-  else if(e.keyCode == 32); {
+  else if(e.keyCode == 32) {
    interval = setInterval(draw, 10);
    i = true;
   }
